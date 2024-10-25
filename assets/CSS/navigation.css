@@ -1,0 +1,77 @@
+
+/*-------- HEADER SECTION ---------*/
+header{
+    background-color: var(--lightest-background);
+}
+nav {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em;
+    background-color: var(--lightest-background);
+    color: var(--darkest);
+ 
+ }
+ nav > ul {
+     margin: 0;
+     list-style: none;
+     padding: 0;
+     display: flex;
+ }
+ nav > ul > li {
+     overflow: hidden;
+ }
+
+ nav > ul > li > a{
+     color:var(--darkest);
+     text-decoration: none;
+     text-transform: uppercase;
+     padding: 0.5em
+ }
+ .menu-button-container{
+     cursor: pointer;
+     display: none;
+ }
+ #menu-toggle{
+     display: none;
+ }
+
+
+ 
+/*--------------------------RESPONSIVE ENTRE 600 ET 800PX--------------------------------*/
+@media screen and (max-width: 800px) {
+
+    /*-------- HEADER SECTION 600-800 PX---------*/
+    .menu-button-container{
+        display: flex;
+    }
+    nav > ul {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        flex-flow: column;
+        width: 100%;
+        left: 0;
+    }
+    nav > ul > li {
+        background-color:var(--lightest-background);
+        display: flex;
+        justify-content: center;
+    }
+    #menu-toggle ~ ul li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        transition: height 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+
+    }
+    #menu-toggle:checked ~ ul li{
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .btn{
+       display: none;
+   }
+}

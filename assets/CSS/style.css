@@ -1,0 +1,168 @@
+
+
+
+/* ----------------------imports CSS----------------------- */
+@import "navigation.css";
+@import "hero.css";
+@import "main.css";
+
+:root{
+    --base:#0D75BC;
+    --light-background:#e3e5e6;
+    --lightest-background:#ffffff;
+    --darkest:#000000;
+    --button-text:#ffffff;
+}
+/*--------------------------DESKTOP PLUS GRAND QUE  800PX--------------------------------*/
+body{
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+    font-family: sans-serif;
+    background-color:  var(--light-background);
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Monoton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Monoton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*---------GENERAL----------*/
+
+button{
+    border-radius: 0.7em;
+    border: 0;
+    background-color: var(--base);
+    padding: 1em;
+    margin: 1.5em 0;
+}
+button a{
+    text-decoration: none;
+    color: var(--button-text);
+    border: 0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+h1{
+    font-size: 4em;
+    padding: 0.4em 0;
+}
+h1.hero-title, p.hero-text{
+    color:var(--button-text);
+}
+
+
+
+
+/*--------FOOTER SECTION ---------*/
+footer{
+    text-align: center;
+    padding: 1em;
+    color: var(--button-text);
+    background-color: var(--base);
+}
+
+
+/*--------  MAIN CONTENT ---------*/
+
+aside > h3{
+    text-align: center;
+}
+
+aside{
+    flex: 1;
+}
+#container{
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+    gap: 20px;
+    padding: 3em 1em 1em;
+    max-width: 1200px;
+    align-self: center;
+    justify-content: center;
+}
+.article-title {
+    text-align: center;
+}
+.img-medium, .img-small {
+    display: none;
+}
+.picture-page main{
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+#section1, #section2, #section3{
+    display: none;
+}
+
+/*--------------------------RESPONSIVE ENTRE 600 ET 800PX--------------------------------*/
+@media screen and (max-width: 800px) {
+   /*---------GENERAL----------*/
+    h1{
+        font-size: 3em;
+        padding: 0.4em 0;
+    }
+   
+
+    
+    /* nav ul {
+        flex-flow: column;
+    }
+    nav ul li {
+        border-bottom: 1px solid;
+        text-align: center;
+    }
+    nav ul li:last-child{
+        border-bottom: 1px solid #B09687;
+    } */
+
+
+    
+   /*-------- MAIN CONTENT 600-800 PX ---------*/
+    .img-big, .img-small {
+        display: none;
+    }
+    .img-medium{
+        display: inline;
+    }
+}
+
+
+/*--------------------------RESPONSIVE PLUS PETIT QUE 600PX--------------------------------*/
+@media screen and (max-width: 600px) {
+    /*---------GENERAL----------*/
+    h1{
+        font-size: 2em;
+        padding: 0.4em 0;
+    }
+
+
+
+    /*-------- HEADER SECTION < 600 PX ---------*/
+    #top-bar{
+        display: none;
+    }
+
+    /*-------- MAIN CONTENT < 600 PX ---------*/
+    #container {
+    flex-flow: column-reverse;
+    }
+    main{
+        flex: 0;
+    }
+    .img-big, .img-medium {
+        display: none;
+    }
+    .img-small{
+        display: inline;
+    }
+}

@@ -1,0 +1,17 @@
+/*-------- HOME ----------*/
+#hero {
+  height: 80vh;
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/hero-home.jpg");
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+#hero * {
+  max-width: 800px;
+  flex-direction: column;
+  text-align: center;
+}
